@@ -192,8 +192,8 @@ resource "aws_security_group_rule" "backend_lb_frontend" {
 #backend_lb allowing connections from bastion on port 22
 resource "aws_security_group_rule" "backend_lb_bastion" {
   type              = "ingress"
-  from_port         = 22
-  to_port           = 22
+  from_port         = 80
+  to_port           = 80
   protocol          = "tcp"
   source_security_group_id = local.bastion_sg_id
   security_group_id = local.backend_lb_sg_id
