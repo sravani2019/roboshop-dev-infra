@@ -13,3 +13,7 @@ variable "zone_id" {
 variable "domain-name" {
   default = "devops90s.space"
 }
+
+variable "mysql_root_password" {
+  type = string
+}
