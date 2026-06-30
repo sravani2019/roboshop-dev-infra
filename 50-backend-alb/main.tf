@@ -1,11 +1,11 @@
 resource "aws_lb" "backend_lb" {
   name               = "${local.common_name}-backend-lb"
-  internal           = true
+  internal           = false
   load_balancer_type = "application"
   security_groups    = [local.backend_lb_sg_id]
   subnets            = local.private_subnet_id
 
-  enable_deletion_protection = false #if true we cannot delete via terraform
+  enable_deletion_protection = true #if true we cannot delete via terraform
 
 
 
