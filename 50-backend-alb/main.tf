@@ -1,4 +1,4 @@
-resource "aws_lb" "backed_lb" {
+resource "aws_lb" "backend_lb" {
   name               = "${local.common_name}-backend_lb"
   internal           = false
   load_balancer_type = "application"
