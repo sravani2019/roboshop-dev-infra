@@ -5,7 +5,7 @@ resource "aws_lb" "backend_lb" {
   security_groups    = [local.backend_lb_sg_id]
   subnets            = local.private_subnet_id
 
-  enable_deletion_protection = true #if true we cannot delete via terraform
+  enable_deletion_protection = false#if true we cannot delete via terraform
 
 
 
