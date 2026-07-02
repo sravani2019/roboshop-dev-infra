@@ -3,6 +3,7 @@ locals {
     private_subnet_id= split(",", data.aws_ssm_parameter.private_subnet_id.value)[0]
     ami_id = data.aws_ami.joindevops.id
     vpc_id = data.aws_ssm_parameter.vpc_id.value
+    backend_lb_listener_arn = data.aws_ssm_parameter.backend_lb_listener_arn.value
     common_tags = {
         project = var.project
         environment = var.environment

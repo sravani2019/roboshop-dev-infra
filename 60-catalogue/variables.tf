@@ -14,7 +14,7 @@ variable "app_version" {
 #   default = "Z05085342KJ3YDJ9HCQQS"
 # }
 
-# variable "domain-name" {
-#   default = "devops90s.space"
-# }
+variable "domain-name" {
+  default = "devops90s.space"
+}
 
