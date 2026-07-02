@@ -174,7 +174,7 @@ resource "aws_lb_listener_rule" "catalogue" {
 
   condition {
     host_header {
-      values = ["catalogue.backend_lb-${var.environment}.${var.domain-name}"]
+      values = ["catalogue.backend-lb-${var.environment}.${var.domain-name}"]
     }
   }
 }
@@ -191,3 +191,4 @@ resource "terraform_data" "catalogue_delete" {
   }
    
 }
+
